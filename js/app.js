@@ -75,10 +75,6 @@ $(".category-airline").click(function () {
       });
     console.log("harus slide");
   }
-  // $(".detail-refund ul li.category-detail").removeClass("activeMenu");
-  // $(".detail-refund ul li.category-detail:first-child").addClass("activeMenu");
-  // $(".wrapper-box").css("display", "none");
-  // $(".wrapper-box:first-child").css("display", "block");
 });
 
 $(".closer").click(() => {

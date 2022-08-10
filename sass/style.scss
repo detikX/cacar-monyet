@@ -474,6 +474,26 @@ section {
 .contentx {
   background: #06264d;
   position: relative;
+  .is {
+    @media screen and (max-width: 766px) {
+      display: none;
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.1;
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
   .detail-refund {
     position: relative;
     z-index: 20;
@@ -483,6 +503,7 @@ section {
     position: absolute;
     left: -30%;
     top: 0;
+    z-index: 5;
     height: 400px;
     width: auto;
     @media screen and(max-width:766px) {
@@ -529,6 +550,10 @@ section {
   }
   .category-click {
     display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 18;
+    text-align: center;
     @media screen and (max-width: 766px) {
       margin-left: 150px;
     }
@@ -563,5 +588,6 @@ section {
   }
   .airline-content {
     display: none;
+    // transition: 0.3s;
   }
 }
