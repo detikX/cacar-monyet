@@ -74,17 +74,39 @@ $.ajax({
     var date_ = world.date;
     var newCase = world.new_cases;
     var total_cases = world.total_cases;
+    
     var death = world.new_deaths.value == "undefined" ? 0 : 0;
 
-    console.log(date_);
+    var monthWording = {
+      "01": "Januari",
+      "02": "Februari",
+      "03": "Maret",
+      "04": "April",
+      "05": "Mei",
+      "06": "Juni",
+      "07": "Juli",
+      "08": "Agustus",
+      "09": "September",
+      "10": "Oktober",
+      "11": "November",
+      "12": "Desember",
+    };
+    var year = date_.slice(0, 4);
+    var month = date_.slice(5, 7);
+    var day = date_.slice(8, 10);
+    console.log(day);
+    var parseMont = (monthWording[month]);
     var parse = parseFloat(total_cases.replace(/,/g, ""));
+    var parseTotal = parseInt(parse);
+    var finalTotal = parseTotal.toLocaleString("id")
     var parseCase = parseFloat(newCase.replace(/,/g, ""));
-    $(".kasusbaru").text(parse);
+    $(".kasusbaru").text(finalTotal);
     $(".nambah").text(parseCase);
     $(".die").text(death);
-    console.log("new case", newCase);
-    console.log("total", total_cases);
-    console.log("death", death);
+    $(".tanggalnya").text(`${day} ${parseMont} ${year}`);
+    // console.log("new case", newCase);
+    // console.log("total", total_cases);
+    // console.log("death", death);
     // if (world) {
     //   var data_ = api_[a].date;
     //   console.log(typeof data_);
