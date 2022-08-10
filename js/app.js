@@ -16,11 +16,11 @@
 //   // }
 // });
 
+$(window).on("load", function () {
+  $(".preloader").fadeOut(10000);
+  $(".preloader").remove();
+});
 $(() => {
-  $(window).on("load", function () {
-    $(".preloader").fadeOut(10000);
-    $(".preloader").remove();
-  });
   new WOW().init();
   var mobile = $(".menu").addClass("mob");
   $(document).on("click", ".m-menu", () => {
@@ -64,6 +64,7 @@ $(".category-airline").click(function () {
   var toShow = "#show-" + id;
   $(".airline-content").not(toShow).hide();
   $(toShow).fadeIn("slow");
+  $(".twox").show();
   if ($(".detail-refund").children().hasClass("close-info")) {
     $(toShow)
       // .removeClass("close-info")
@@ -79,6 +80,7 @@ $(".category-airline").click(function () {
 
 $(".closer").click(() => {
   $(".airline-content").removeClass("open").addClass("close-info");
+  $(".twox").fadeOut();
   $(".airline-content") /*.fadeOut()*/
     .slideUp();
 });
