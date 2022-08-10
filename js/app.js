@@ -64,6 +64,14 @@ $(() => {
 $.ajax({
   url: "https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv",
   dataType: "text",
+  beforeSend: function(){
+    $(".loading").show();
+    $('.dataapi').hide();
+  },
+  complete: function(){
+      $(".loading").hide();
+      $('.dataapi').show();
+  },
   success: (response) => {
     /* console.log(response) */
     var api_ = $.csv.toObjects(response);
