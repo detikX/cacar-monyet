@@ -81,6 +81,12 @@ $(".category-airline").click(function () {
 $(".closer").click(() => {
   $(".airline-content").removeClass("open").addClass("close-info");
   $(".twox").fadeOut();
+  $(".airline-name").removeClass("bg-category");
   $(".airline-content") /*.fadeOut()*/
     .slideUp();
+});
+
+$(".category-click .airline-name").click(function () {
+  $(".category-click .airline-name").removeClass("bg-category");
+  $(this).addClass("bg-category");
 });
