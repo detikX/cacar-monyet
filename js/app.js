@@ -33,6 +33,7 @@ $(() => {
     // });
   }
 
+  /*
   function count($this) {
     var current = parseInt($this.html(), 10);
     if (!$this.data("isCounting") && current < $this.data("count")) {
@@ -57,6 +58,39 @@ $(() => {
     });
   }
   startCount();
+  */
+});
+
+$.ajax({
+  url: "https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv",
+  dataType: "text",
+  success: (response) => {
+    /* console.log(response) */
+    var api_ = $.csv.toObjects(response);
+    var a;
+    // console.log(api_[api_.length - 1]);
+    // for (a = 0; a < api_.length; a++) {
+    var world = api_[api_.length - 1];
+    var date_ = world.date;
+    var newCase = world.new_cases;
+    var total_cases = world.total_cases;
+    var death = world.new_deaths.value == "undefined" ? 0 : 0;
+
+    console.log(date_);
+    var parse = parseFloat(total_cases.replace(/,/g, ""));
+    var parseCase = parseFloat(newCase.replace(/,/g, ""));
+    $(".kasusbaru").text(parse);
+    $(".nambah").text(parseCase);
+    $(".die").text(death);
+    console.log("new case", newCase);
+    console.log("total", total_cases);
+    console.log("death", death);
+    // if (world) {
+    //   var data_ = api_[a].date;
+    //   console.log(typeof data_);
+    // }
+    // }
+  },
 });
 
 $(".category-airline").click(function () {
