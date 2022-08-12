@@ -532,9 +532,9 @@ section {
       padding: 0;
       li {
         display: inline-block;
-        border: 1px solid;
         margin: 4px 2px;
-        padding: 4px;
+        background: rgba(255,255,255,.1);
+        padding: 4px 16px;
         border-radius: 4px;
         cursor: pointer;
         &.activeMenu,&:hover {
@@ -710,6 +710,18 @@ section {
         height: 100%;
         object-fit: contain;
       }
+    }
+  }
+}
+
+.sources {
+  background: #06264d;
+  a {
+    transition: .2s;
+    &:hover {
+      color: #dfdfdf;
+      margin-left: 3px;
+      text-decoration: none;
     }
   }
 }
