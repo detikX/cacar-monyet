@@ -53,6 +53,7 @@ section {
   &__help {
     position: absolute;
     right: 16px;
+    z-index: 9;
     
     @media screen and(min-width:1400px) {
       right: 10%;
@@ -64,13 +65,14 @@ section {
   }
   &__monyet {
     position: absolute;
-    bottom: 32px;
+    bottom: 82px;
     left: 50%;
     width: 200px;
     height: auto;
     transform: translate(-50%, 0);
     @media screen and (max-width:766px) {
-      display: none;
+      // display: none;
+      bottom: 45%;
     }
     &.two {
       bottom: 120px;
@@ -115,9 +117,13 @@ section {
     }
     left: 32px;
     top: 32px;
+    width: 700px;
     z-index: 9;
     @media screen and (max-width: 766px) {
       left: 0;
+      width: fit-content;
+      top: initial;
+      bottom: 52px;
     }
     h2 {
       color: #fff;
@@ -135,6 +141,7 @@ section {
   &__data {
     bottom: 32px;
     left: 72px;
+    display: none;
     @media screen and(min-width:1400px) {
       left: 15%;
     }
