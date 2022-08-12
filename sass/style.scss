@@ -151,7 +151,6 @@ section {
   }
   &__help {
     position: absolute;
-    filter: grayscale(1);
     left: -20%;
     top: 0;
     width: 200px;
@@ -163,6 +162,7 @@ section {
       object-fit: contain;
     }
     &.two {
+      filter: grayscale(1);
       top: initial;
       opacity: 0.1;
       right: -82px;
