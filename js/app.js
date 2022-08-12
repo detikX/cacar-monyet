@@ -78,7 +78,7 @@ $.ajax({
     var a;
     // console.log(api_[api_.length - 1]);
     // for (a = 0; a < api_.length; a++) {
-    var world = api_[api_.length - 3];
+    var world = api_[api_.length - 1];
     console.log(world);
     var date_ = world.date;
     var newCase = world.new_cases;
@@ -113,8 +113,8 @@ $.ajax({
     var parseIntCase = parseInt(parseCase);
     var finalCase = parseIntCase.toLocaleString("id")
     $(".kasusbaru").text(finalTotal);
-    $(".nambah").text(finalCase);
-    $(".die").text(death);
+    // $(".nambah").text(finalCase);
+    // $(".die").text(death);
     $(".tanggalnya").text(`${day} ${parseMont} ${year}`);
     // console.log("new case", newCase);
     // console.log("total", total_cases);
