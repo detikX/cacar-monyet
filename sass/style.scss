@@ -636,6 +636,9 @@ section {
       padding: 8px;
       box-shadow: 0 3px 6px #bbb;
       transition: 0.3s;
+      &:hover {
+        background: rgba(2,25,52,.8);
+      }
       i {
         @media screen and (max-width: 766px) {
           display: none;
@@ -657,6 +660,16 @@ section {
   .closer {
     cursor: pointer;
     text-align: center;
+    /* border: 1px solid; */
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 2px 8px;
+    transition: .2s;
+    background: rgba(255,255,255,.1);
+    &:hover {
+      background: rgba(255,255,255,.2);
+    }
   }
   .twox {
     display: none;
