@@ -57,8 +57,9 @@ section {
     
     @media screen and(min-width:1400px) {
       right: 10%;
-      top: initial;
-      bottom: 32px;
+      top: 54px;
+      filter: brightness(.5);
+      // bottom: 32px;
     }
     top: 46px;
     animation: lab_round 20s linear infinite;
