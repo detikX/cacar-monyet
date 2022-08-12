@@ -78,12 +78,14 @@ $.ajax({
     var a;
     // console.log(api_[api_.length - 1]);
     // for (a = 0; a < api_.length; a++) {
-    var world = api_[api_.length - 1];
+    var world = api_[api_.length - 3];
+    console.log(world);
     var date_ = world.date;
     var newCase = world.new_cases;
     var total_cases = world.total_cases;
     
-    var death = world.new_deaths.value == "undefined" ? 0 : 0;
+    var adeath = world.total_deaths;
+    var death = parseFloat(adeath.replace(/,/g, ""));
 
     var monthWording = {
       "01": "Januari",
@@ -108,8 +110,10 @@ $.ajax({
     var parseTotal = parseInt(parse);
     var finalTotal = parseTotal.toLocaleString("id")
     var parseCase = parseFloat(newCase.replace(/,/g, ""));
+    var parseIntCase = parseInt(parseCase);
+    var finalCase = parseIntCase.toLocaleString("id")
     $(".kasusbaru").text(finalTotal);
-    $(".nambah").text(parseCase);
+    $(".nambah").text(finalCase);
     $(".die").text(death);
     $(".tanggalnya").text(`${day} ${parseMont} ${year}`);
     // console.log("new case", newCase);
@@ -126,12 +130,23 @@ $.ajax({
 $(".category-airline").click(function () {
   var id = $(this).attr("id");
   var toShow = "#show-" + id;
+  console.log(toShow);
   $(".airline-content").not(toShow).hide();
   $(toShow).fadeIn("slow");
   $(".twox").show();
+
+  if ($(".detail-refund").children().hasClass("open")){
+    $(toShow).removeClass("open").addClass("close-info").slideDown(function(){
+      $('html, body').animate({
+            scrollTop: $(".refund").offset().top + 20
+        });
+    });
+    console.log("harus fade")
+  }
+
   if ($(".detail-refund").children().hasClass("close-info")) {
     $(toShow)
-      // .removeClass("close-info")
+      .removeClass("close-info")
       .addClass("open")
       .slideDown(function () {
         $("html, body").animate({
@@ -140,6 +155,24 @@ $(".category-airline").click(function () {
       });
     console.log("harus slide");
   }
+
+  $('.detail-refund ul li.category-detail').removeClass("activeMenu");
+  $('.detail-refund ul li.category-detail:first-child').addClass("activeMenu");
+  // $('.wrapper-box').css("display","block");
+  $('.wrapper-box').css("display","none");
+  $(toShow).children('.wrapper-box').first().css("display","block")
+});
+
+$('.detail-refund ul li.category-detail').click(function() {
+  var id = $(this).attr('id');
+  var toShow = '#show-' + id;
+  $('.wrapper-box').not(toShow).hide();
+  $(toShow).fadeIn().removeAttr('hidden');
+});
+
+$('.detail-refund ul li.category-detail').click(function() {
+  $('.detail-refund ul li.category-detail').removeClass("activeMenu");
+        $(this).addClass("activeMenu");
 });
 
 $(".closer").click(() => {
