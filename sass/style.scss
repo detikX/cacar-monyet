@@ -53,6 +53,9 @@ section {
   &__help {
     position: absolute;
     right: 16px;
+    @media screen and(min-width:1400px) {
+      right: 10%;
+    }
     top: 46px;
     animation: lab_round 20s linear infinite;
   }
@@ -67,6 +70,9 @@ section {
   }
   &__title {
     position: absolute;
+    @media screen and(min-width:1400px) {
+      left: 15%;
+    }
     left: 32px;
     top: 32px;
     z-index: 9;
@@ -89,8 +95,14 @@ section {
   &__data {
     bottom: 32px;
     left: 72px;
+    @media screen and(min-width:1400px) {
+      left: 15%;
+    }
     z-index: 9;
     position: absolute;
+    @media screen and (max-width:766px) {
+      left: 32px;
+    }
     h3 {
       color: #00ff99;
       font-size: 80px;
