@@ -53,8 +53,11 @@ section {
   &__help {
     position: absolute;
     right: 16px;
+    
     @media screen and(min-width:1400px) {
       right: 10%;
+      top: initial;
+      bottom: 32px;
     }
     top: 46px;
     animation: lab_round 20s linear infinite;
@@ -107,6 +110,8 @@ section {
     position: absolute;
     @media screen and(min-width:1400px) {
       left: 15%;
+      // top: initial;
+      // bottom: 32px;
     }
     left: 32px;
     top: 32px;
