@@ -180,7 +180,10 @@ $(".closer").click(() => {
   $(".twox").fadeOut();
   $(".airline-name").removeClass("bg-category");
   $(".airline-content") /*.fadeOut()*/
-    .slideUp();
+    .fadeOut();
+    $("html, body").animate({
+      scrollTop: $(".contentx").offset().top + 20,
+    })
 });
 
 $(".category-click .airline-name").click(function () {
