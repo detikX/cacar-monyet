@@ -63,6 +63,21 @@ section {
     }
     top: 46px;
     animation: lab_round 20s linear infinite;
+    @media screen and (max-width:766px) {
+      position: absolute;
+      /* right: 16px; */
+      z-index: 9;
+      left: 0;
+      /* width: 100%; */
+      top: 0;
+      animation: lab_round 20s linear infinite;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
   }
   &__monyet {
     position: absolute;
