@@ -58,16 +58,18 @@ section {
     @media screen and(min-width:1400px) {
       right: 10%;
       top: 54px;
-      filter: brightness(.5);
       // bottom: 32px;
     }
     top: 46px;
     animation: lab_round 20s linear infinite;
     @media screen and (max-width:766px) {
+      filter: brightness(.8);
       position: absolute;
       /* right: 16px; */
+      right: 20%;
+      left: -20%;
       z-index: 9;
-      left: 0;
+      // left: 0;
       /* width: 100%; */
       top: 0;
       animation: lab_round 20s linear infinite;
@@ -811,5 +813,23 @@ section {
       margin-left: 3px;
       text-decoration: none;
     }
+  }
+}
+
+.card-img {
+  width: 640px;
+  height: auto;
+  border-radius: 16px;
+  margin: 16px 0;
+  @media screen and (max-width:766px) {
+    width: auto;
+  }
+  // background: rgba($color: #fff, $alpha: .5);
+  // box-shadow: 0 2px 6px #bbb;
+  img {
+    width: 100%;
+    border-radius: 16px;
+    height: 100%;
+    object-fit: contain;
   }
 }
