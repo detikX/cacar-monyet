@@ -190,3 +190,22 @@ $(".category-click .airline-name").click(function () {
   $(".category-click .airline-name").removeClass("bg-category");
   $(this).addClass("bg-category");
 });
+
+// let bg = document.getElementById("dpr");
+// let moon = document.getElementById("one");
+// let mountain = document.getElementById("two");
+// let road = document.getElementById("demo");
+
+// window.addEventListener("scroll", function () {
+//   var value = window.scrollY;
+//   // console.log("value", value);
+//   bg.style.bottom = value * 1 + "px";
+//   // moon.style.bottom = -value + 10 + "%";
+//   // moon.style.left = -value + 5 + "%";
+//   // moon.style.transform = scale(1.2);
+//   // mountain.style.bottom = -value + 10 + "%";
+//   road.style.bottom = value * 0.05 + "px";
+//   // console.log(".bg.style.top", bg.style.top);
+//   // console.log("moon.style.top", moon.style.top);
+//   // text.style.top = value * 1 + "px";
+// });

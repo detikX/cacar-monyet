@@ -872,3 +872,10 @@ section {
     object-fit: contain;
   }
 }
+
+.no-radius {
+  border-radius: 0 !important;
+  img {
+    border-radius: 0 !important;
+  }
+}
