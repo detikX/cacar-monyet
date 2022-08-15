@@ -263,10 +263,12 @@ section {
     }
     @keyframes opacities {
       0%, 100% {
-        opacity: 0.1;
+        filter: grayscale(1);
+        opacity: .1;
       }
       50% {
-        opacity: 0.3;
+        filter: grayscale(.1);
+        opacity: .3;
       }
     }
   }
