@@ -957,10 +957,10 @@ section {
 #show-batik-air {
   li{
     &:first-child{
-      @media screen and (max-width:766px) {
-        display: none;
-      }
       &::before{
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         content: "";
         position: absolute;
         top: 0px;
