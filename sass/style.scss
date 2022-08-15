@@ -913,6 +913,9 @@ section {
   li{
     &:first-child{
       &::before{
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         content: "";
         position: absolute;
         top: -55px;
@@ -927,6 +930,9 @@ section {
     }
     &:nth-child(2),&:last-child {
       &::before {
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         content: "";
         position: absolute;
         width: 150px;
@@ -951,6 +957,9 @@ section {
 #show-batik-air {
   li{
     &:first-child{
+      @media screen and (max-width:766px) {
+        display: none;
+      }
       &::before{
         content: "";
         position: absolute;
@@ -967,6 +976,9 @@ section {
     }
     &:nth-child(2),&:last-child {
       &::before {
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         content: "";
         position: absolute;
         width: 250px;
@@ -1005,6 +1017,9 @@ section {
         border: 1px dashed;
         left: 72px;
         border-bottom-color: transparent;
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         /* border-right-color: transparent;*/
       }
     }
@@ -1012,6 +1027,9 @@ section {
       &::before {
         content: "";
         position: absolute;
+        @media screen and (max-width:766px) {
+          display: none;
+        }
         width: 250px;
         z-index: -1;
         height: 45px;
