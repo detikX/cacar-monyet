@@ -603,7 +603,7 @@ section {
   position: relative;
   .is {
     @media screen and (max-width: 766px) {
-      display: none;
+      // display: none;
     }
   }
   &__bg {
@@ -654,7 +654,9 @@ section {
     width: auto;
     @media screen and(max-width:766px) {
       left: 0;
-      height: 230px;
+      height: 320px;
+      top: initial;
+      bottom: 165px;
     }
     img {
       width: 100%;
