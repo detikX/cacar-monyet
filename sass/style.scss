@@ -231,6 +231,14 @@ section {
       margin: 0 16px;
     }
   }
+  @keyframes MoveUpDown {
+    0%, 100% {
+      top: 0;
+    }
+    50% {
+      top: 100px;
+    }
+  }
   &__help {
     position: absolute;
     left: -20%;
@@ -238,6 +246,7 @@ section {
     width: 200px;
     opacity: 0.15;
     height: 200px;
+    animation: MoveUpDown 4s linear infinite;
     img {
       width: 100%;
       height: 100%;
@@ -250,6 +259,15 @@ section {
       right: -82px;
       left: initial;
       bottom: -72px;
+      animation: opacities 6s linear infinite;;
+    }
+    @keyframes opacities {
+      0%, 100% {
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.3;
+      }
     }
   }
   p,
