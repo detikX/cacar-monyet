@@ -1121,3 +1121,9 @@ body {
     font-size: 16px;
   }
 }
+
+a{
+  &:hover {
+    color: #f7941f;
+  }
+}
