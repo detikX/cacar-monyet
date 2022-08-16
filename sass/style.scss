@@ -701,8 +701,17 @@ section {
       top: initial;
       right: -30%;
       bottom: 0;
+      animation: MoveLeft 3.5s linear infinite;;
       @media screen and (max-width: 766px) {
         display: none !important;
+      }
+    }
+    @keyframes MoveLeft {
+      0%, 100% {
+        right: -30%;
+      }
+      50% {
+        right: -33%;
       }
     }
   }
