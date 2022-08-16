@@ -236,7 +236,7 @@ section {
       top: 0;
     }
     50% {
-      top: 100px;
+      top: 40px;
     }
   }
   &__help {
@@ -278,8 +278,8 @@ section {
       right: -120px;
       width: 80px;
       top: 50px;
-      // animation: MoveUpDown 5.5s linear infinite;
-      animation: none;
+      animation: MoveUpDown 5.5s linear infinite;
+      // animation: none;
     }
     &.five {
       left: -40px;
